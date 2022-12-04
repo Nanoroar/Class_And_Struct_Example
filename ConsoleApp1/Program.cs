@@ -37,6 +37,9 @@ namespace ConsoleApp1
         }
     }
 
+
+
+
     internal class Program
     {
         static void Main(string[] args)
@@ -47,7 +50,9 @@ namespace ConsoleApp1
 
             var point2 = point1;
 
-            point2.X=2; point2.Y=3;
+            point2.X=2; 
+            point2.Y=3;
+            Console.WriteLine($"Is value type:  { point1 is ValueType}");
             Console.WriteLine("Class ex:\n" + point1 + "\n" + point2);
 
             /* 
@@ -62,9 +67,12 @@ namespace ConsoleApp1
 
             var box2 = box1;
 
-            box2.H = 2; box2.W = 3;
+            box2.H = 2; 
+            
+            box2.W = 3;
+            Console.WriteLine($"Is value type {box1 is ValueType}");
             Console.WriteLine("Struct ex:\n" + box1 + "\n" + box2);
-
+            Console.ReadKey();
 
         }
     }
